@@ -1,0 +1,120 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Segoe UI', Arial, sans-serif;
+  background: linear-gradient(120deg, #ffe0ef 0%, #ffb6e6 100%);
+  color: #3a003a;
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.bg-video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  object-fit: cover;
+  z-index: -1;
+  filter: blur(4px) brightness(0.4) grayscale(0.2);
+}
+
+#main-content {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 255, 255, 0.85);
+  border-radius: 2.5rem;
+  box-shadow: 0 8px 32px 0 rgba(255, 182, 193, 0.25);
+  padding: 2.5rem 1.5rem;
+  margin: 2vw auto;
+  max-width: 420px;
+  width: 100%;
+}
+
+h1 {
+  font-size: 2.3rem;
+  margin-top: 1rem;
+  margin-bottom: 1.2rem;
+  text-align: center;
+  letter-spacing: 2px;
+  font-weight: 800;
+  color: #e91e63;
+  text-shadow: 0 2px 12px #ffb6e6a0;
+}
+
+#webcam {
+  border-radius: 2rem;
+  box-shadow: 0 4px 32px #e91e63a0;
+  margin: 1.2rem 0 1.2rem 0;
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border: 4px solid #e91e63;
+  background: #fff0f6;
+}
+
+#status {
+  font-size: 1.2rem;
+  margin: 1rem 0;
+  background: #ffe0ef;
+  color: #ad1457;
+  padding: 1rem 1.5rem;
+  border-radius: 1.2rem;
+  text-align: center;
+  box-shadow: 0 2px 8px #e91e63a0;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+
+.button {
+  background: linear-gradient(90deg, #e91e63 0%, #ad1457 100%);
+  color: #fff;
+  font-size: 1.2rem;
+  border: none;
+  border-radius: 2rem;
+  padding: 1rem 2rem;
+  margin: 1rem 0;
+  cursor: pointer;
+  box-shadow: 0 4px 16px #e91e63a0;
+  width: 100%;
+  max-width: 350px;
+  font-weight: 700;
+  letter-spacing: 1px;
+  transition: background 0.2s, transform 0.2s;
+}
+
+.button:active {
+  background: linear-gradient(90deg, #ad1457 0%, #e91e63 100%);
+  transform: scale(0.98);
+}
+
+@media (max-width: 600px) {
+  h1 { font-size: 1.4rem; }
+  #status { font-size: 1rem; }
+  .button { font-size: 1rem; }
+  #main-content {
+    padding: 1rem 0.5rem;
+    margin: 0;
+    border-radius: 1.2rem;
+    max-width: 98vw;
+  }
+  #webcam {
+    max-width: 90vw;
+    border-radius: 1.2rem;
+  }
+}
+
+/* Add a subtle fade-in animation for main content */
+#main-content {
+  animation: fadeIn 1s ease;
+}
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(30px); }
+  to { opacity: 1; transform: translateY(0); }
+}

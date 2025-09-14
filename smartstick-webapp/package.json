@@ -1,0 +1,9 @@
+{
+  "name": "smartstick-webapp",
+  "version": "1.0.0",
+  "description": "AI-powered smart stick web app for the visually impaired",
+  "scripts": {
+    "start": "npx serve public"
+  },
+  "dependencies": {}
+}

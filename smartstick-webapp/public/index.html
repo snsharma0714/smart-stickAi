@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI Smart Stick Web App</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <!-- Background video (replace src with your own video for final version) -->
+  <!-- Background video removed for a cleaner look -->
+  <div id="main-content">
+    <h1>Smart Stick: AI for the Visually Impaired</h1>
+    <video id="webcam" autoplay playsinline></video>
+    <div id="status">Loading model...</div>
+    <button class="button" id="emergency-btn" aria-label="Emergency">Emergency: Long Press</button>
+    <div style="font-size:1rem; margin-top:1rem; text-align:center; max-width:350px;">Touch anywhere to restart. Connect earphones for best results. All feedback is via sound and vibration.</div>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@4.16.0/dist/tf.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@tensorflow-models/coco-ssd"></script>
+  <script src="app.js"></script>
+</body>
+</html>
