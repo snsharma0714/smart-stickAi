@@ -102,10 +102,7 @@ window.addEventListener('DOMContentLoaded', () => {
 
   // Startup spoken instruction
   speak('Smart stick activated. Please connect your earphones for best results.');
-  // Add touch-to-reload feature
-  document.body.addEventListener('touchstart', () => {
-    location.reload();
-  });
+  // (Removed touch-to-reload feature)
 
   // Emergency long-press for location
   let pressTimer;
